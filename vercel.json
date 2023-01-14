@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "build": [
+    "builds": [
         {
             "src": "backend/wsgi.py",
             "use": "@vercel/python",
@@ -10,9 +10,9 @@
             }
         },
         {
-            "src":"buil.sh",
-            "use": "@vaercel/static-build",
-            "config":{
+            "src": "build.sh",
+            "use": "@vercel/static-build",
+            "config": {
                 "distDir": "staticfiles_build"
             }
         }
@@ -27,4 +27,5 @@
             "dest": "backend/wsgi.py"
         }
     ]
+
 }
