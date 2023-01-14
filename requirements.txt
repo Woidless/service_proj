@@ -11,8 +11,10 @@ certifi==2022.9.24
 chardet==3.0.4
 charset-normalizer==2.1.1
 Click==7.0
+cloud-init
 colorama==0.4.3
 comm==0.1.2
+command-not-found
 configobj==5.0.6
 constantly==15.1.0
 cryptography==2.8
