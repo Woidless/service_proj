@@ -1,6 +1,7 @@
 from pathlib import Path
 from decouple import config
 import os
+import dj_database_url
 from datetime import timedelta
 
 
@@ -32,6 +33,10 @@ INSTALLED_APPS = [
 
     # my_apps
     'account',    
+#    'review',
+#    'comment',
+#    'crud_res',
+#    'map', 
 ]
 
 MIDDLEWARE = [
@@ -82,6 +87,7 @@ DATABASES = {
     }
 }
 
+DATABASES['default'] = dj_database_url.config()
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -120,7 +126,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles','static/')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 #Dec 15 16:28:21 bilal-5 systemd[1]: gunicorn.socket: Failed with result 'service-sta>
 
 MEDIA_URL = 'media/'
